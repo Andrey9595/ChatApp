@@ -80,7 +80,7 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
     // Hilt
-    def hiltVersion = "2.41"
+    def hiltVersion = "2.44.2"
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-compiler:$hiltVersion"
 
