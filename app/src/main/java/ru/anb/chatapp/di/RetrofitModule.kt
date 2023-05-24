@@ -17,8 +17,8 @@ import javax.inject.Singleton
 @Module
 class RetrofitModule {
 
-   @Provides
-   @Singleton
+    @Provides
+    @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .baseUrl(RetrofitClient.BASE_URL)

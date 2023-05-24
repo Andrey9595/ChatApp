@@ -14,5 +14,5 @@ interface AuthApi {
     suspend fun sendAuthCode(@Body body: SendAuthCodeRequest): Response<SendAuthCodeResponse>
 
     @POST("users/check-auth-code/")
-    suspend  fun checkAuthCode(@Body body: CheckAuthCodeRequest): Response<CheckAuthCodeResponse>
+    suspend fun checkAuthCode(@Body body: CheckAuthCodeRequest): Response<CheckAuthCodeResponse>
 }
