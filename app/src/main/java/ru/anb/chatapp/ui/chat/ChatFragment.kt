@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
+import ru.anb.chatapp.R
 import ru.anb.chatapp.adapter.ChatAdapter
 import ru.anb.chatapp.databinding.FragmentChatBinding
-import ru.anb.chatapp.ui.authorization.AuthorizationViewModel
 
 @AndroidEntryPoint
 class ChatFragment : Fragment() {
@@ -32,5 +33,17 @@ class ChatFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         val chats = viewModel.getChatList()
         adapter.setData(chats)
+        goToProfile()
+    }
+
+    private fun goToProfile(){
+        binding.goToProfile.setOnClickListener {
+            findNavController().navigate(R.id.action_chatFragment_to_profileFragment)
+        }
+    }
+
+    private fun getOneChatFragment(){
+        val action = ChatFragmentDirections. actionChatFragmentToOneChatFragment()
+        findNavController().navigate(action)
     }
 }

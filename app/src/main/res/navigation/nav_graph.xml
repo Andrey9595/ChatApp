@@ -34,10 +34,18 @@
         <action
             android:id="@+id/action_chatFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_oneChatFragment"
+            app:destination="@id/oneChatFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="ru.anb.chatapp.ui.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/oneChatFragment"
+        android:name="ru.anb.chatapp.ui.onechat.OneChatFragment"
+        android:label="fragment_one_chat"
+        tools:layout="@layout/fragment_one_chat" />
 </navigation>
