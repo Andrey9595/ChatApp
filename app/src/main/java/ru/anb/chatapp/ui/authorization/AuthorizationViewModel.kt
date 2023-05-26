@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import ru.anb.chatapp.data.AuthRepository
-import ru.anb.chatapp.domain.AuthState
+import ru.anb.chatapp.models.AuthState
 import ru.anb.chatapp.models.autorization.CheckAuthCodeRequest
 import ru.anb.chatapp.models.autorization.SendAuthCodeRequest
 import javax.inject.Inject

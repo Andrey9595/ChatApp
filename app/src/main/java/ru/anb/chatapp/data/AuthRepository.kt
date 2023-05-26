@@ -1,7 +1,7 @@
 package ru.anb.chatapp.data
 
 import ru.anb.chatapp.R
-import ru.anb.chatapp.di.LoadState
+import ru.anb.chatapp.models.LoadState
 import ru.anb.chatapp.models.autorization.CheckAuthCodeRequest
 import ru.anb.chatapp.models.autorization.CheckAuthCodeResponse
 import ru.anb.chatapp.models.autorization.SendAuthCodeRequest

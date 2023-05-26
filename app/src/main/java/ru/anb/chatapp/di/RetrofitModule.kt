@@ -9,6 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import ru.anb.chatapp.retrofit.AuthApi
+import ru.anb.chatapp.retrofit.RegistrApi
 import ru.anb.chatapp.retrofit.RetrofitClient
 import javax.inject.Singleton
 
@@ -42,5 +43,11 @@ class RetrofitModule {
     @Singleton
     fun provideAuthApi(retrofit: Retrofit): AuthApi {
         return retrofit.create(AuthApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRegistrApi(retrofit: Retrofit): RegistrApi {
+        return retrofit.create(RegistrApi::class.java)
     }
 }

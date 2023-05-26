@@ -14,7 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import ru.anb.chatapp.R
 import ru.anb.chatapp.databinding.FragmentAuthorizationBinding
-import ru.anb.chatapp.di.LoadState
+import ru.anb.chatapp.models.LoadState
 
 @AndroidEntryPoint
 class AuthorizationFragment : Fragment() {

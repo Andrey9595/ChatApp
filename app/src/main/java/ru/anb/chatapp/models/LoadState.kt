@@ -1,4 +1,4 @@
-package ru.anb.chatapp.di
+package ru.anb.chatapp.models
 
 import androidx.annotation.StringRes
 

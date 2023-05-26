@@ -7,6 +7,6 @@ import ru.anb.chatapp.models.registration.RegistrationRequest
 import ru.anb.chatapp.models.registration.RegistrationResponse
 
 interface RegistrApi {
-    @POST("/users/register/")
+    @POST("users/register/")
     suspend fun registration(@Body body: RegistrationRequest): Response<RegistrationResponse>
 }

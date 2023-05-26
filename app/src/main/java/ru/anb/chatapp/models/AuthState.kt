@@ -1,6 +1,5 @@
-package ru.anb.chatapp.domain
+package ru.anb.chatapp.models
 
-import ru.anb.chatapp.di.LoadState
 import ru.anb.chatapp.models.autorization.CheckAuthCodeResponse
 import ru.anb.chatapp.models.autorization.SendAuthCodeResponse
 

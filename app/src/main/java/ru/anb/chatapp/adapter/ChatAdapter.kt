@@ -26,7 +26,8 @@ class ChatAdapter() : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
         val item = chats[position]
         with(holder.binding) {
-            textChat.text = item.chat
+            chatName.text = item.chatMane
+            lastMessage.text = item.lastMessage
         }
     }
 

@@ -5,16 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
-import ru.anb.chatapp.R
-import ru.anb.chatapp.databinding.FragmentAuthorizationBinding
+import ru.anb.chatapp.adapter.ChatAdapter
 import ru.anb.chatapp.databinding.FragmentChatBinding
+import ru.anb.chatapp.ui.authorization.AuthorizationViewModel
 
 @AndroidEntryPoint
 class ChatFragment : Fragment() {
 
     private var _binding: FragmentChatBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: ViewModelChat by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,5 +24,13 @@ class ChatFragment : Fragment() {
     ): View? {
         _binding = FragmentChatBinding.inflate(layoutInflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val adapter = ChatAdapter()
+        binding.recyclerView.adapter = adapter
+        val chats = viewModel.getChatList()
+        adapter.setData(chats)
     }
 }
