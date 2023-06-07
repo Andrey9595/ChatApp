@@ -29,7 +29,7 @@ class ChatFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = ChatAdapter()
+        val adapter = ChatAdapter(onChatClick = {getOneChatFragment(it)})
         binding.recyclerView.adapter = adapter
         val chats = viewModel.getChatList()
         adapter.setData(chats)
@@ -42,8 +42,8 @@ class ChatFragment : Fragment() {
         }
     }
 
-    private fun getOneChatFragment(){
-        val action = ChatFragmentDirections. actionChatFragmentToOneChatFragment()
+    private fun getOneChatFragment(id: Int){
+        val action = ChatFragmentDirections.actionChatFragmentToOneChatFragment(id)
         findNavController().navigate(action)
     }
 }

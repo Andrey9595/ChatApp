@@ -36,7 +36,12 @@
             app:destination="@id/profileFragment" />
         <action
             android:id="@+id/action_chatFragment_to_oneChatFragment"
-            app:destination="@id/oneChatFragment" />
+            app:destination="@id/oneChatFragment">
+        <argument
+            android:name="chatId"
+            app:argType="integer"
+            />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -47,5 +52,10 @@
         android:id="@+id/oneChatFragment"
         android:name="ru.anb.chatapp.ui.onechat.OneChatFragment"
         android:label="fragment_one_chat"
-        tools:layout="@layout/fragment_one_chat" />
+        tools:layout="@layout/fragment_one_chat">
+        <argument
+            android:name="chatId"
+            app:argType="integer"
+            />
+    </fragment>
 </navigation>
