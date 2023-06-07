@@ -3,7 +3,7 @@ package ru.anb.chatapp.data
 import ru.anb.chatapp.domain.ChatListRepository
 import ru.anb.chatapp.models.chat.Chat
 import ru.anb.chatapp.models.chat.ChatHead
-import java.util.UUID
+import java.util.*
 
 class ChatListRepositoryImpl : ChatListRepository {
     // база чатов
@@ -15,7 +15,7 @@ class ChatListRepositoryImpl : ChatListRepository {
         for (i in 1..20)
             messages.add(
                 Message(
-                    text = UUID.randomUUID().toString(),
+                    text = UUID.randomUUID().toString() + UUID.randomUUID().toString(),
                     type = if (i % 2 == 0) MessageType.INCOMING else MessageType.OUTGOING
                 )
             )

@@ -1,7 +1,7 @@
 package ru.anb.chatapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 import ru.anb.chatapp.databinding.ActivityMainBinding
 
